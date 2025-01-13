@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Haberler"
+             Title="Haberler">
+    <StackLayout>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" Margin="10" Spacing="10">
+                <Button Text="Manşet" Clicked="CategoryButton_Clicked" />
+                <Button Text="Ekonomi" Clicked="CategoryButton_Clicked"/>
+                <Button Text="Gündem" Clicked="CategoryButton_Clicked" />
+                <Button Text="Spor" Clicked="CategoryButton_Clicked" />
+                <Button Text="Bilim Teknoloji" Clicked="CategoryButton_Clicked"/>
+                <Button Text="Son Dakika" Clicked="CategoryButton_Clicked"/>
+                <Button Text="Güncel" Clicked="CategoryButton_Clicked" />
+                <Button Text="Eğitim" Clicked="CategoryButton_Clicked" />
+            </StackLayout>
+        </ScrollView>
+
+        <ListView x:Name="newsListView" ItemsSource="{Binding FilteredNewsItems}" RowHeight="500" Margin="10,10,10,10" ItemTapped="NewsItem_Tapped"> 
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout  Margin="0,0,0,10">
+                            <Image Source="{Binding ImageUrl}" Aspect="AspectFill" WidthRequest="400" HeightRequest="400"/>
+                            <Label Text="{Binding Title}" FontAttributes="Bold" Margin="10,5,10,0" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Author}" FontAttributes="None" Margin="10,5,10,0" TextColor="Gray" HorizontalOptions="Center"/>
+                            <Label Text="{Binding PubDate}" FontAttributes="None" Margin="10,5,10,0" TextColor="Gray" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

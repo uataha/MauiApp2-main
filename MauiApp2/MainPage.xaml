@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             xmlns:local="clr-namespace:MauiApp2"
+             BackgroundColor="white"
+             Title="Ana Sayfa">
+
+
+
+    <Grid RowDefinitions="200, Auto, *" ColumnDefinitions="9*, .20*" Padding="50">
+        <Image Source="foto.png" BackgroundColor="White" />
+
+        <StackLayout Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center" Spacing="20">
+            <Label Text="Taha HİCRET" TextColor="Black" FontSize="40" HorizontalOptions="Center"/>
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" FontSize="16" TextColor="Black" HorizontalOptions="Center"/>
+            <Label Text="Proje 3" FontSize="50" HorizontalOptions="Center" TextColor="Black"/>
+        </StackLayout>
+
+
+    </Grid>
+
+
+
+
+
+</ContentPage>

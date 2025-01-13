@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp2"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Anasayfa">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
+
+        <ShellContent
+            Title="Ana Sayfa"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" 
+            Icon="ev.png"/>
+
+        <ShellContent
+            Title="Kurlar"
+            ContentTemplate="{DataTemplate local:Kurlar}"
+            Route="Kurlar"
+            Icon="doviz.png"/>
+
+        <ShellContent
+            Title="Haberler"
+            ContentTemplate="{DataTemplate local:Haberler}"
+            Route="Haberler"
+            Icon="haber.png"/>
+
+        <ShellContent
+            Title="Hava Durumu"
+            ContentTemplate="{DataTemplate local:HavaDurumu}"
+            Route="HavaDurumu"
+            Icon="havadurumu.png"/>
+
+        <ShellContent
+            Title="Yapılacaklar"
+            ContentTemplate="{DataTemplate local:ToDoList}"
+            Route="ToDoList"
+            Icon="todolist.png"/>
+
+        <ShellContent
+            Title="Ayarlar"
+            ContentTemplate="{DataTemplate local:Ayarlar}"
+            Route="Ayarlar"
+            Icon="ayarlar.png"/>
+
+    </FlyoutItem>
+</Shell>

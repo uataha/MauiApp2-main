@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Login"
+             Title="Giriş Ekranı">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="20">
+        <Frame x:Name="MainFrame" CornerRadius="60" Padding="30" HasShadow="True" HeightRequest="450">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label x:Name="lblTitle" Text="Giriş Yapınız" FontSize="Large"/>
+                </StackLayout>
+
+                <StackLayout x:Name="loginEkran" Spacing="20" IsVisible="True">
+                    <Entry x:Name="txtEmail" Placeholder="Email" Keyboard="Email" Margin="0, 10, 0, 0"/>
+                    <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" Margin="0, 10, 0, 0"/>
+                    <Button Text="Oturum Aç" Clicked="LoginInClicked" Background="Green" TextColor="Black" Margin="0, 10, 0, 0"/>
+                    <Button Text="Hesabım Yok" BackgroundColor="Red" TextColor="Black" Clicked="KayitLoginEkraniGoster" Margin="0, 10, 0, 0"/>
+                </StackLayout>
+
+                <StackLayout x:Name="kayitEkran" Spacing="20" IsVisible="False">
+                    <Entry x:Name="txtName" Placeholder="Kullanıcı Adı" Keyboard="Default" Margin="0, 10, 0, 0"/>
+                    <Entry x:Name="txtREmail" Placeholder="Email" Keyboard="Email" Margin="0, 10, 0, 0"/>
+                    <Entry x:Name="txtRPassword" Placeholder="Password" IsPassword="True" Margin="0, 10, 0, 0"/>
+                    <Button Text="Kaydol" Clicked="RegisterClicked" Background="Green" TextColor="Black" Margin="0, 20, 0, 0"/>
+                    <Button Text="Zaten hesabım var" BackgroundColor="Red" TextColor="Black" Clicked="KayitLoginEkraniGoster"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        
+    </VerticalStackLayout>
+</ContentPage>
